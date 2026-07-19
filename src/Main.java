@@ -1,3 +1,5 @@
+import static java.lang.String.*;
+
 public class Main{
 
     public static void main(String[] args) {
@@ -10,7 +12,7 @@ public class Main{
         double notdaDoFilme = 8.4;
         //Media calculada das notas da minha cabeca
         double media = (10 + 5.3)/ 2;
-        System.out.println("Nota: " + media);
+        System.out.println(format("Nota: %.2f", media));
         String sinopse;
         sinopse = """
         Filme Paprika
