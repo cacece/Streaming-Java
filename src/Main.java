@@ -17,7 +17,7 @@ public class Main{
         sinopse = """
         Filme Paprika
         Filme Psicodelico Japones Maluco
-        Bom demais!
+        Bom demais!!
         """;
         System.out.println(sinopse);
 
