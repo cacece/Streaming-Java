@@ -11,7 +11,7 @@ public class Main{
         boolean incluidoNoPlano = true;
         double notdaDoFilme = 8.4;
         //Media calculada das notas da minha cabeca
-        double media = (10 + 5.3)/ 2;
+        double media = (10 + 6.3)/ 2;
         System.out.println(format("Nota: %.2f", media));
         String sinopse;
         sinopse = """
