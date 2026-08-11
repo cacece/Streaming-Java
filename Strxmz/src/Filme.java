@@ -2,22 +2,24 @@ public class Filme {
     String nome;
     int anoDeLancamento;
     boolean incluidoNoPlano;
-    double avaliacao;
+    double somaDasAvaliacoes;
     int totalDeAvaliacoes;
-    int duracaoEmMinutos;    
+    int duracaoEmMinutos;
+
+    double pegaMedia() {
+        return somaDasAvaliacoes / totalDeAvaliacoes;
+    }
 
     void exibeFichaTecnica() {
         System.out.println("Nome do filme: " + nome);
-        System.out.println("Ano de lançamento: " + anoDeLancamento);
-        System.out.println("Incluído no plano: " + incluidoNoPlano);
-        System.out.println("Avaliação: " + avaliacao);
-        System.out.println("Total de avaliações: " + totalDeAvaliacoes);
-        System.out.println("Duração em minutos: " + duracaoEmMinutos);
+        System.out.println("Ano de lancamento: " + anoDeLancamento);
+        System.out.println("Incluido no plano: " + incluidoNoPlano);
+        System.out.println("Duração: " + duracaoEmMinutos + " minutos");
+        System.out.println("Media das avaliacoes: " + pegaMedia());
+    }
 
     void avalia(double nota) {
-        double somaDasNotas = avaliacao * totalDeAvaliacoes;
+        somaDasAvaliacoes += nota;
         totalDeAvaliacoes++;
-        somaDasNotas += nota;
-        avaliacao = somaDasNotas / totalDeAvaliacoes;
     }
 }

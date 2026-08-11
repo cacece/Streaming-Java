@@ -4,9 +4,12 @@ public class Principal {
         meuFilme.nome = "Paprika";
         meuFilme.anoDeLancamento = 2006;
         meuFilme.incluidoNoPlano = true;
-        meuFilme.avaliacao = 8.5;
-        meuFilme.totalDeAvaliacoes = 1000;
+        meuFilme.somaDasAvaliacoes = 85.0;
+        meuFilme.totalDeAvaliacoes = 10;
         meuFilme.duracaoEmMinutos = 90;
+
+        meuFilme.avalia(6.1);
         meuFilme.exibeFichaTecnica();
+
     }
 }
