@@ -12,6 +12,10 @@ public class Filme {
         return totalDeAvaliacoes;
     }
 
+    public double getSomaDasAvaliacoes() {
+        return somaDasAvaliacoes;
+    }
+
     public double pegaMedia() {
         return somaDasAvaliacoes / totalDeAvaliacoes;
     }
@@ -21,6 +25,7 @@ public class Filme {
         System.out.println("Ano de lancamento: " + anoDeLancamento);
         System.out.println("Incluido no plano: " + incluidoNoPlano);
         System.out.println("Duração: " + duracaoEmMinutos + " minutos");
+        System.out.println("Total de avaliações: " + totalDeAvaliacoes);
         System.out.println("Media das avaliacoes: " + pegaMedia());
     }
 
