@@ -1,16 +1,22 @@
+package br.com.strxmz.modelos;
+
 public class Filme {
-    String nome;
+    public String nome;
     int anoDeLancamento;
     boolean incluidoNoPlano;
-    double somaDasAvaliacoes;
-    int totalDeAvaliacoes;
+    private double somaDasAvaliacoes;
+    private int totalDeAvaliacoes;
     int duracaoEmMinutos;
 
-    double pegaMedia() {
+    public int getTotalDeAvaliacoes() {
+        return totalDeAvaliacoes;
+    }
+
+    public double pegaMedia() {
         return somaDasAvaliacoes / totalDeAvaliacoes;
     }
 
-    void exibeFichaTecnica() {
+    public void exibeFichaTecnica() {
         System.out.println("Nome do filme: " + nome);
         System.out.println("Ano de lancamento: " + anoDeLancamento);
         System.out.println("Incluido no plano: " + incluidoNoPlano);
@@ -18,7 +24,7 @@ public class Filme {
         System.out.println("Media das avaliacoes: " + pegaMedia());
     }
 
-    void avalia(double nota) {
+    public void avalia(double nota) {
         somaDasAvaliacoes += nota;
         totalDeAvaliacoes++;
     }
