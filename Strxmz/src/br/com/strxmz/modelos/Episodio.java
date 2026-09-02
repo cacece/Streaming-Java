@@ -1,10 +1,19 @@
 package br.com.strxmz.modelos;
 
-public class Episodio {
+import br.com.strxmz.calculos.Classificavel;
+
+public class Episodio implements Classificavel {
     private int numero;
     private String nome;
     private Serie serie;
-    
+    private int totalDeVisualizacoes;
+
+    public int getTotalDeVisualizacoes() {
+        return totalDeVisualizacoes;
+    }
+    public void setTotalDeVisualizacoes(int totalDeVisualizacoes) {
+        this.totalDeVisualizacoes = totalDeVisualizacoes;
+    }
     public int getNumero() {
         return numero;
     }
@@ -22,5 +31,14 @@ public class Episodio {
     }
     public void setSerie(Serie serie) {
         this.serie = serie;
+    }
+
+    @Override
+    public int getClassificacao() {
+        if (totalDeVisualizacoes > 100) {
+            return 5;
+        } else {
+            return 3;
+        }
     }
 }

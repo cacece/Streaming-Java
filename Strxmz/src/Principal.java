@@ -1,4 +1,6 @@
 import br.com.strxmz.calculos.CalculadoraDeTempo;
+import br.com.strxmz.calculos.FiltroRecomendacao;
+import br.com.strxmz.modelos.Episodio;
 import br.com.strxmz.modelos.Filme;
 import br.com.strxmz.modelos.Serie;
 
@@ -34,5 +36,15 @@ public class Principal {
         calculadora.inclui(paprikaFilme);
         calculadora.inclui(aotSerie);
         System.out.println("\nTempo para maratonar tudo: " + calculadora.getTempoTotal());
+
+        FiltroRecomendacao filtro = new FiltroRecomendacao();
+        filtro.filtra(paprikaFilme);
+        
+        Episodio episodio1Aot = new Episodio();
+        episodio1Aot.setNumero(1);
+        episodio1Aot.setTotalDeVisualizacoes(150);
+        episodio1Aot.setSerie(aotSerie);
+        
+        filtro.filtra(episodio1Aot);
     }
 }

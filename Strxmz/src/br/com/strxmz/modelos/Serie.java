@@ -1,6 +1,8 @@
 package br.com.strxmz.modelos;
 
-public class Serie extends Titulo {
+import br.com.strxmz.calculos.Classificavel;
+
+public class Serie extends Titulo implements Classificavel {
     private int temporadas;
     private int episodiosPorTemporada;
     private boolean ativa;
@@ -34,5 +36,10 @@ public class Serie extends Titulo {
     @Override
     public int getDuracaoEmMinutos() {
         return temporadas * episodiosPorTemporada * minutosPorEpisodio;
+    }
+
+    @Override
+    public int getClassificacao() {
+        return 0;
     }
 } 
