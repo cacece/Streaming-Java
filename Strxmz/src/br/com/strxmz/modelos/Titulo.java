@@ -13,14 +13,14 @@ private String nome;
     }
 
     public void exibeFichaTecnica() {
-        System.out.println("\nNome do filme: " + getNome());
+        System.out.println("Nome do filme: " + getNome());
         System.out.println("Ano de lancamento: " + getAnoDeLancamento());
         System.out.println("Incluido no plano: " + getIncluidoNoPlano());
         System.out.println("Duração media para maratonar: " + getDuracaoEmMinutos() + " minutos");
         if (getTotalDeAvaliacoes() > 0) {
             System.out.println("Media das avaliacoes: " + pegaMedia());
         } else {
-            System.out.println("Nenhuma avaliacao registrada.");
+            System.out.println("Nenhuma avaliacao registrada.\n");
         }
         if (getTotalDeAvaliacoes() > 0) {
             System.out.println("Total de avaliações: " + getTotalDeAvaliacoes() + "\n");

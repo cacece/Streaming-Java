@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 import br.com.strxmz.calculos.CalculadoraDeTempo;
 import br.com.strxmz.calculos.FiltroRecomendacao;
 import br.com.strxmz.modelos.Episodio;
@@ -7,7 +9,7 @@ import br.com.strxmz.modelos.Serie;
 public class Principal {
     public static void main(String[] args) {
 
-        Filme paprikaFilme = new Filme();
+        var paprikaFilme = new Filme();
 
         paprikaFilme.setNome("Paprika");
         paprikaFilme.setAnoDeLancamento(2006);
@@ -22,7 +24,38 @@ public class Principal {
 
         paprikaFilme.exibeFichaTecnica();
 
-        Serie aotSerie = new Serie();
+        var perfectBlueFilme = new Filme();
+        perfectBlueFilme.setNome("Perfect Blue");
+        perfectBlueFilme.setAnoDeLancamento(1997);
+        perfectBlueFilme.setIncluidoNoPlano(true);
+        perfectBlueFilme.setDuracaoEmMinutos(81);
+        
+        perfectBlueFilme.avalia(10.0);
+
+        perfectBlueFilme.exibeFichaTecnica();
+
+        var silentVoiceFilme = new Filme();
+        silentVoiceFilme.setNome("A Voz do Silêncio");
+        silentVoiceFilme.setAnoDeLancamento(2016);
+        silentVoiceFilme.setIncluidoNoPlano(true);
+        silentVoiceFilme.setDuracaoEmMinutos(130);
+
+        silentVoiceFilme.avalia(9.5);
+
+        silentVoiceFilme.exibeFichaTecnica();
+
+        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+        listaDeFilmes.add(paprikaFilme);
+        listaDeFilmes.add(perfectBlueFilme);
+        listaDeFilmes.add(silentVoiceFilme);
+        System.out.println("\nTamanho da lista de filmes: " + listaDeFilmes.size() + "\n");
+        System.out.println("Primeiro filme da lista: " + listaDeFilmes.get(0).getNome() + "\n");
+
+
+
+
+
+        var aotSerie = new Serie();
         aotSerie.setNome("Attack on Titan");
         aotSerie.setAnoDeLancamento(2013);
         aotSerie.setIncluidoNoPlano(true);
@@ -32,9 +65,10 @@ public class Principal {
 
         aotSerie.exibeFichaTecnica();
 
-        CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
+        var calculadora = new CalculadoraDeTempo();
         calculadora.inclui(paprikaFilme);
         calculadora.inclui(aotSerie);
+        calculadora.inclui(perfectBlueFilme);
         System.out.println("\nTempo para maratonar tudo: " + calculadora.getTempoTotal());
 
         FiltroRecomendacao filtro = new FiltroRecomendacao();
