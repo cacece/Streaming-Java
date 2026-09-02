@@ -20,16 +20,19 @@ public class Principal {
 
         paprikaFilme.exibeFichaTecnica();
 
-        Serie minhaSerie = new Serie();
-        minhaSerie.setNome("Attack on Titan");
-        minhaSerie.setAnoDeLancamento(2013);
-        minhaSerie.setIncluidoNoPlano(true);
-        minhaSerie.setTemporadas(8);
-        minhaSerie.setEpisodiosPorTemporada(12);
-        minhaSerie.setMinutosPorEpisodio(24);
+        Serie aotSerie = new Serie();
+        aotSerie.setNome("Attack on Titan");
+        aotSerie.setAnoDeLancamento(2013);
+        aotSerie.setIncluidoNoPlano(true);
+        aotSerie.setTemporadas(8);
+        aotSerie.setEpisodiosPorTemporada(12);
+        aotSerie.setMinutosPorEpisodio(24);
 
-        minhaSerie.exibeFichaTecnica();
+        aotSerie.exibeFichaTecnica();
 
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
+        calculadora.inclui(paprikaFilme);
+        calculadora.inclui(aotSerie);
+        System.out.println("\nTempo para maratonar tudo: " + calculadora.getTempoTotal());
     }
 }

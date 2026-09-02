@@ -17,8 +17,14 @@ private String nome;
         System.out.println("Ano de lancamento: " + getAnoDeLancamento());
         System.out.println("Incluido no plano: " + getIncluidoNoPlano());
         System.out.println("Duração media para maratonar: " + getDuracaoEmMinutos() + " minutos");
-        System.out.println("Total de avaliações: " + getTotalDeAvaliacoes());
-        System.out.println("Media das avaliacoes: " + pegaMedia() + "\n");
+        if (getTotalDeAvaliacoes() > 0) {
+            System.out.println("Media das avaliacoes: " + pegaMedia());
+        } else {
+            System.out.println("Nenhuma avaliacao registrada.");
+        }
+        if (getTotalDeAvaliacoes() > 0) {
+            System.out.println("Total de avaliações: " + getTotalDeAvaliacoes() + "\n");
+        }
     }
 
     public void avalia(double nota) {
