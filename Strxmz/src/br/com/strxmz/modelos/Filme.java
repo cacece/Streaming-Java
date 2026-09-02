@@ -54,17 +54,10 @@ public class Filme {
         return somaDasAvaliacoes;
     }
 
-    public void setSomaDasAvaliacoes(double somaDasAvaliacoes) {
-        this.somaDasAvaliacoes = somaDasAvaliacoes;
-    }
-
     public int getTotalDeAvaliacoes() {
         return totalDeAvaliacoes;
     }
-    public void setTotalDeAvaliacoes(int totalDeAvaliacoes) {
-        this.totalDeAvaliacoes = totalDeAvaliacoes;
-    }
-
+   
     public int getDuracaoEmMinutos() {
         return duracaoEmMinutos;
     }
