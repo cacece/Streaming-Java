@@ -13,12 +13,12 @@ private String nome;
     }
 
     public void exibeFichaTecnica() {
-        System.out.println("Nome do filme: " + nome);
-        System.out.println("Ano de lancamento: " + anoDeLancamento);
-        System.out.println("Incluido no plano: " + incluidoNoPlano);
-        System.out.println("Duração: " + duracaoEmMinutos + " minutos");
-        System.out.println("Total de avaliações: " + totalDeAvaliacoes);
-        System.out.println("Media das avaliacoes: " + pegaMedia());
+        System.out.println("\nNome do filme: " + getNome());
+        System.out.println("Ano de lancamento: " + getAnoDeLancamento());
+        System.out.println("Incluido no plano: " + getIncluidoNoPlano());
+        System.out.println("Duração media para maratonar: " + getDuracaoEmMinutos() + " minutos");
+        System.out.println("Total de avaliações: " + getTotalDeAvaliacoes());
+        System.out.println("Media das avaliacoes: " + pegaMedia() + "\n");
     }
 
     public void avalia(double nota) {
@@ -42,7 +42,7 @@ private String nome;
         this.anoDeLancamento = anoDeLancamento;
     }
 
-    public boolean isIncluidoNoPlano() {
+    public boolean getIncluidoNoPlano() {
         return incluidoNoPlano;
     }
 
