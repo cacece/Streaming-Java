@@ -5,11 +5,10 @@ public class Principal {
 
         Filme meuFilme = new Filme();
 
-        meuFilme.nome = "Paprika";
-        meuFilme.nome.
-        meuFilme.anoDeLancamento = 2006;
-        meuFilme.incluidoNoPlano = true;
-        meuFilme.duracaoEmMinutos = 90;
+        meuFilme.setNome("Paprika");
+        meuFilme.setAnoDeLancamento(2006);
+        meuFilme.setIncluidoNoPlano(true);
+        meuFilme.setDuracaoEmMinutos(90);
 
         meuFilme.avalia(8.5);
         meuFilme.avalia(9.0);
