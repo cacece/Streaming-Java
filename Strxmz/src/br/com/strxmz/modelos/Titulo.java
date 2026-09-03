@@ -1,7 +1,7 @@
 package br.com.strxmz.modelos;
 
 public class Titulo {
-private String nome;
+    private String nome;
     private int anoDeLancamento;
     private boolean incluidoNoPlano;
     private double somaDasAvaliacoes;
@@ -71,4 +71,6 @@ private String nome;
     public void setDuracaoEmMinutos(int duracaoEmMinutos) {
         this.duracaoEmMinutos = duracaoEmMinutos;
     }
+
+    
 }

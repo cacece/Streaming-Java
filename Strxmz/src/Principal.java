@@ -10,7 +10,6 @@ public class Principal {
     public static void main(String[] args) {
 
         var paprikaFilme = new Filme();
-
         paprikaFilme.setNome("Paprika");
         paprikaFilme.setAnoDeLancamento(2006);
         paprikaFilme.setIncluidoNoPlano(true);
@@ -48,10 +47,9 @@ public class Principal {
         listaDeFilmes.add(paprikaFilme);
         listaDeFilmes.add(perfectBlueFilme);
         listaDeFilmes.add(silentVoiceFilme);
+        System.out.println(listaDeFilmes);
         System.out.println("\nTamanho da lista de filmes: " + listaDeFilmes.size() + "\n");
         System.out.println("Primeiro filme da lista: " + listaDeFilmes.get(0).getNome() + "\n");
-
-
 
 
 
